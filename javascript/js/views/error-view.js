@@ -10,6 +10,10 @@ var app = app || {};
  */
 app.ErrorView = Backbone.View.extend(/** @lends ErrorView.prototype */{
     /** 
+     * @property {Object} className Class associated to the div element when rendered
+     */
+    className: 'mdl-cell mdl-cell--12-col mdl-cell--middle mdl-typography--text-center',
+    /** 
      * @contructs ErrorView object.
      * Initialize the related template in the DOM
      */

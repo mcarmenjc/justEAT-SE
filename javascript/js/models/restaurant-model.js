@@ -14,9 +14,10 @@ app.RestaurantModel = Backbone.Model.extend(/** @lends RestaurantModel.prototype
      */
 	defaults: function(){
 		return {
-			name: '',
-			rating: 0,
-			foodType: undefined
+			Name: '',
+			RatingStars: 0,
+			NumberOfRatings: 0,
+			CuisineTypes: undefined
 		};
 	}
 }); 

@@ -10,6 +10,10 @@ var app = app || {};
  */
 app.RestaurantView = Backbone.View.extend(/** @lends RestaurantView.prototype */{
     /** 
+     * @property {Object} className Class associated to the div element when rendered
+     */
+    className: 'mdl-cell mdl-cell--4-col',
+    /** 
      * @contructs RestaurantView object.
      * Initialize the related template in the DOM
      */
