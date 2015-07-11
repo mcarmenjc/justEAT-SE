@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{349C5851-65DF-11DA-9384-00065B846F21};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{126E6D9E-77B1-4F42-82EB-7C3DE2CA3958}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>justEatTest</RootNamespace>
+    <AssemblyName>justEatTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.2\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="packages.config" />
+    <Content Include="Web.config" />
+    <Content Include="index.html" />
+    <Content Include="Gruntfile.js" />
+    <Content Include="css\justEAT-interview.css" />
+    <Content Include="css\material.css" />
+    <Content Include="css\material.min.css" />
+    <Content Include="css\font\MaterialIcons-Regular.eot" />
+    <Content Include="css\font\MaterialIcons-Regular.ttf" />
+    <Content Include="css\font\MaterialIcons-Regular.woff" />
+    <Content Include="js\app.js" />
+    <Content Include="js\collections\restaurant-collection.js" />
+    <Content Include="js\dist\justEAT-interview.js" />
+    <Content Include="js\dist\justEAT-interview.min.js" />
+    <Content Include="js\doc\AppView.html" />
+    <Content Include="js\doc\ErrorModel.html" />
+    <Content Include="js\doc\ErrorView.html" />
+    <Content Include="js\doc\RestaurantCollection.html" />
+    <Content Include="js\doc\RestaurantModel.html" />
+    <Content Include="js\doc\RestaurantView.html" />
+    <Content Include="js\doc\collections_restaurant-collection.js.html" />
+    <Content Include="js\doc\index.html" />
+    <Content Include="js\doc\models_error-model.js.html" />
+    <Content Include="js\doc\models_restaurant-model.js.html" />
+    <Content Include="js\doc\views_app-view.js.html" />
+    <Content Include="js\doc\views_error-view.js.html" />
+    <Content Include="js\doc\views_restaurant-view.js.html" />
+    <Content Include="js\doc\fonts\OpenSans-Bold-webfont.eot" />
+    <Content Include="js\doc\fonts\OpenSans-Bold-webfont.svg" />
+    <Content Include="js\doc\fonts\OpenSans-Bold-webfont.woff" />
+    <Content Include="js\doc\fonts\OpenSans-BoldItalic-webfont.eot" />
+    <Content Include="js\doc\fonts\OpenSans-BoldItalic-webfont.svg" />
+    <Content Include="js\doc\fonts\OpenSans-BoldItalic-webfont.woff" />
+    <Content Include="js\doc\fonts\OpenSans-Italic-webfont.eot" />
+    <Content Include="js\doc\fonts\OpenSans-Italic-webfont.svg" />
+    <Content Include="js\doc\fonts\OpenSans-Italic-webfont.woff" />
+    <Content Include="js\doc\fonts\OpenSans-Light-webfont.eot" />
+    <Content Include="js\doc\fonts\OpenSans-Light-webfont.svg" />
+    <Content Include="js\doc\fonts\OpenSans-Light-webfont.woff" />
+    <Content Include="js\doc\fonts\OpenSans-LightItalic-webfont.eot" />
+    <Content Include="js\doc\fonts\OpenSans-LightItalic-webfont.svg" />
+    <Content Include="js\doc\fonts\OpenSans-LightItalic-webfont.woff" />
+    <Content Include="js\doc\fonts\OpenSans-Regular-webfont.eot" />
+    <Content Include="js\doc\fonts\OpenSans-Regular-webfont.svg" />
+    <Content Include="js\doc\fonts\OpenSans-Regular-webfont.woff" />
+    <Content Include="js\doc\scripts\linenumber.js" />
+    <Content Include="js\doc\scripts\prettify\lang-css.js" />
+    <Content Include="js\doc\scripts\prettify\prettify.js" />
+    <Content Include="js\doc\styles\jsdoc-default.css" />
+    <Content Include="js\doc\styles\prettify-jsdoc.css" />
+    <Content Include="js\doc\styles\prettify-tomorrow.css" />
+    <Content Include="js\libs\backbone-min.js" />
+    <Content Include="js\libs\backbone.js" />
+    <Content Include="js\libs\jquery-2.1.4.js" />
+    <Content Include="js\libs\jquery-2.1.4.min.js" />
+    <Content Include="js\libs\material.js" />
+    <Content Include="js\libs\material.min.js" />
+    <Content Include="js\libs\npm.js" />
+    <Content Include="js\libs\underscore-min.js" />
+    <Content Include="js\libs\underscore.js" />
+    <Content Include="js\models\error-model.js" />
+    <Content Include="js\models\restaurant-model.js" />
+    <Content Include="js\views\app-view.js" />
+    <Content Include="js\views\error-view.js" />
+    <Content Include="js\views\restaurant-view.js" />
+    <Content Include="spec\SpecRunner.html" />
+    <Content Include="spec\collections\restaurant-collection.spec.js" />
+    <Content Include="spec\fixtures\index-fixture.html" />
+    <Content Include="spec\libs\jasmine-jquery.js" />
+    <Content Include="spec\libs\sinon-1.15.0.js" />
+    <Content Include="spec\libs\jasmine-2.3.4\boot.js" />
+    <Content Include="spec\libs\jasmine-2.3.4\console.js" />
+    <Content Include="spec\libs\jasmine-2.3.4\jasmine-html.js" />
+    <Content Include="spec\libs\jasmine-2.3.4\jasmine.css" />
+    <Content Include="spec\libs\jasmine-2.3.4\jasmine.js" />
+    <Content Include="spec\libs\jasmine-2.3.4\jasmine_favicon.png" />
+    <Content Include="spec\models\error-model.spec.js" />
+    <Content Include="spec\models\restaurant-model.spec.js" />
+    <Content Include="spec\views\app-view.spec.js" />
+    <Content Include="spec\views\error-view.spec.js" />
+    <Content Include="spec\views\restaurant-view.spec.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\RestaurantController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Start\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="css\" />
+    <Folder Include="js\" />
+    <Folder Include="spec\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\justEatTest.Services\justEatTest.Services.csproj">
+      <Project>{888384A4-6808-4375-8C39-43C0EE6DAE11}</Project>
+      <Name>justEatTest.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <ItemGroup>
+    <None Include="package.json" />
+    <None Include="css\font\MaterialIcons-Regular.woff2" />
+    <None Include="js\doc\scripts\prettify\Apache-License-2.0.txt" />
+    <None Include="js\libs\backbone-min.map" />
+    <None Include="js\libs\jquery-2.1.4.min.map" />
+    <None Include="js\libs\underscore-min.map" />
+  </ItemGroup>
+</Project>

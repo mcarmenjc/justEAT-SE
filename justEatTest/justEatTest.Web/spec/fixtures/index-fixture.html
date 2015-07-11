@@ -1,0 +1,44 @@
+<div id="main">
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--middle mdl-typography--text-right">
+                <form>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="outcode" />
+                        <label class="mdl-textfield__label" for="outcode">Outcode...</label>
+                    </div>
+                </form>
+            </div>
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--middle mdl-typography--text-left">
+                <a class="mdl-button mdl-js-button mdl-button--icon" id="search">
+                    <i class="material-icons">explore</i>
+                </a>
+            </div>
+        </div>
+        <div class="mdl-grid" id="error">
+        </div>
+        <div class="mdl-grid" id="restaurant-list">
+        </div>
+    </div>
+    
+    <script type="text/template" id="restaurant-template">
+        <div class="mdl-card mdl-shadow--2dp restaurant-card">
+            <div class="mdl-card__title mdl-card--expand">
+                <h2 class="mdl-card__title-text"><%- Name %></h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+                <h6>Cuisine types:</h6>
+                <ul>
+                    <% _.each(CuisineTypes, function(type){ %>
+                        <li> <%= type.Name %> </li>
+                    <% }) %>
+                </ul> 
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+                <h6>Rating: <%- RatingStars %>  Number of ratings: <%- NumberOfRatings %></h6>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/template" id="error-template">
+        <h5> <%- message %> </h5>
+    </script>
