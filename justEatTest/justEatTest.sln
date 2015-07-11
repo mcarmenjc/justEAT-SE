@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "justEatTest.Web", "justEatTest.Web\justEatTest.Web.csproj", "{126E6D9E-77B1-4F42-82EB-7C3DE2CA3958}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "justEatTest.Services.Test", "justEatTest.Services.Test\justEatTest.Services.Test.csproj", "{327EE056-A02C-415D-9F6D-67BF39B3E447}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "justEatTest.Services", "justEatTest.Services\justEatTest.Services.csproj", "{888384A4-6808-4375-8C39-43C0EE6DAE11}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{126E6D9E-77B1-4F42-82EB-7C3DE2CA3958}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{126E6D9E-77B1-4F42-82EB-7C3DE2CA3958}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{126E6D9E-77B1-4F42-82EB-7C3DE2CA3958}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{126E6D9E-77B1-4F42-82EB-7C3DE2CA3958}.Release|Any CPU.Build.0 = Release|Any CPU
+		{327EE056-A02C-415D-9F6D-67BF39B3E447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{327EE056-A02C-415D-9F6D-67BF39B3E447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{327EE056-A02C-415D-9F6D-67BF39B3E447}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{327EE056-A02C-415D-9F6D-67BF39B3E447}.Release|Any CPU.Build.0 = Release|Any CPU
+		{888384A4-6808-4375-8C39-43C0EE6DAE11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{888384A4-6808-4375-8C39-43C0EE6DAE11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{888384A4-6808-4375-8C39-43C0EE6DAE11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{888384A4-6808-4375-8C39-43C0EE6DAE11}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

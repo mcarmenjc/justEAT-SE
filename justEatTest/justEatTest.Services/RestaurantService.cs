@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
 using JustEatTest.Services.Entities;
+using System.Configuration;
 
 namespace JustEatTest.Services
 {
@@ -30,9 +31,10 @@ namespace JustEatTest.Services
 		private async Task<IList<Restaurant>> GetRestaurantFromAPI(string outcode)
 		{
 			JustEATResponse result = new JustEATResponse();
-			_httpClient.BaseAddress = new Uri("http://api-interview.just-eat.com/");
+			_httpClient.BaseAddress = new Uri(ConfigurationManager.AppSettings["JustEATUrl"]);
 			AddHttpClientRequestHeaders();
-			HttpResponseMessage response = await _httpClient.GetAsync(string.Format("restaurants?q={0}", outcode));
+			HttpResponseMessage response = await _httpClient.GetAsync(string.Format("{0}?q={1}", 
+				ConfigurationManager.AppSettings["RestaurantEndPoint"], outcode));
 			if (response.IsSuccessStatusCode)
 			{
 				result = await response.Content.ReadAsAsync<JustEATResponse>();
@@ -42,11 +44,15 @@ namespace JustEatTest.Services
 
 		private void AddHttpClientRequestHeaders()
 		{
-			_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", "VGVjaFRlc3RBUEk6dXNlcjI=");
+			_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(
+				ConfigurationManager.AppSettings["AuthorizationScheme"], 
+				ConfigurationManager.AppSettings["AuthorizationParameter"]);
 			_httpClient.DefaultRequestHeaders.AcceptLanguage.Clear();
-			_httpClient.DefaultRequestHeaders.AcceptLanguage.Add(new StringWithQualityHeaderValue("en-GB"));
-			_httpClient.DefaultRequestHeaders.Host = "api-interview.just-eat.com";
-			_httpClient.DefaultRequestHeaders.Add("Accept-Tenant", "uk");
+			_httpClient.DefaultRequestHeaders.AcceptLanguage.Add(new StringWithQualityHeaderValue(
+				ConfigurationManager.AppSettings["AcceptLanguage"]));
+			_httpClient.DefaultRequestHeaders.Host = ConfigurationManager.AppSettings["Host"];
+			_httpClient.DefaultRequestHeaders.Add("Accept-Tenant", 
+				ConfigurationManager.AppSettings["AcceptTenant"]);
 		}
 	}
 }
