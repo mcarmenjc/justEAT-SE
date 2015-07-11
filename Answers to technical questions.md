@@ -54,10 +54,9 @@ msgHandler.Setup(t => t.Send(It.Is<HttpRequestMessage>( 
 		msg.Method == HttpMethod.Get && 				
 		msg.RequestUri.ToString().Contains(string.Format("restaurants?q={ 0}", outcode))))) 				
 		.Returns(response); 			
-return msgHandler; 
-…
+return msgHandler; `
 
-HttpClient fakeHttpClient = new HttpClient(msgHandler.Object); `
+`HttpClient fakeHttpClient = new HttpClient(msgHandler.Object); `
 
 In the JavaScript part, in BackboneJs, I’ve been reviewing the changelog, and the latest versions the mainly fix bugs and stuff. I can emphasise the good parts of using it, like it really separate the MV* duties, with clear views, models and collections. It is really easy to manage the changes in the models and collections listen to the events they trigger. 
 
